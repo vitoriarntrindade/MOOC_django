@@ -8,4 +8,5 @@ class CourseAdmin(admin.ModelAdmin):
     search_fields = ['name', 'slug']
     prepopulated_fields = {'slug': ['name']}
 
+
 admin.site.register(Course, CourseAdmin)

@@ -1,15 +1,20 @@
-from django.shortcuts import render
+from django.shortcuts import render, get_object_or_404
 from courses.models import Course
 
 
 def index(request):
     template_name = 'courses/index.html'
     courses = Course.objects.all()
+    context = {'courses': courses}
 
-    return render(request, template_name, {'courses': courses})
+    return render(request, template_name, context)
 
 
-# def list_courses(request):
-#     courses = Course.objects.all()
-#     template_name =
-#     return
+def details(request, slug):
+    template_name = 'courses/details.html'
+    course = get_object_or_404(Course, slug=slug)
+    context = {'course': course}
+
+    return render(request, template_name, context)
+
+
