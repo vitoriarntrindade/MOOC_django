@@ -39,6 +39,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'core',
     'courses',
+    'accounts',
 ]
 
 MIDDLEWARE = [
@@ -135,3 +136,9 @@ else:
 
 CONTACT_MAIL = 'vitoriarntrindade@gmail.com'
 DEFAULT_FROM_EMAIL = 'vitoriarntrindade@gmail.com'
+
+#auth
+
+LOGIN_URL = 'accounts/entrar/'
+LOGIN_REDIRECT_URL = '/'
+LOGOUT_URL = 'accounts:logout'
