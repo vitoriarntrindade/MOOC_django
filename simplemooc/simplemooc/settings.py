@@ -139,6 +139,6 @@ DEFAULT_FROM_EMAIL = 'vitoriarntrindade@gmail.com'
 
 #auth
 
-LOGIN_URL = 'accounts/entrar/'
+LOGIN_URL = 'accounts:login'
 LOGIN_REDIRECT_URL = '/'
 LOGOUT_URL = 'accounts:logout'
